@@ -90,6 +90,15 @@
 			<version>${cucumber.version}</version>
 			<scope>test</scope>
 		</dependency>
+
+        <!-- MariaDB -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+
 	</dependencies>
 
 	<dependencyManagement>

@@ -13,39 +13,14 @@ import java.util.Date;
 @Data
 
 public class Product  {
-
     
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    
-    
-    
-    
-    
+    //@GeneratedValue(strategy=GenerationType.AUTO)
+     
     private Long productId;
-    
-    
-    
-    
-    
     private String name;
-    
-    
-    
-    
-    
     private String spec;
-    
-    
-    
-    
-    
     private Long qty;
-    
-    
-    
-    
-    
     private Long price;
 
     @PostPersist
@@ -84,16 +59,17 @@ public class Product  {
 
         */
 
-        /** Example 2:  finding and process
-        
-        repository().findById(paymentApproved.get???()).ifPresent(product->{
+        /** Example 2:  finding and process **/
+
+        repository().findById(paymentApproved.getProductId()).ifPresent(product->{
             
-            product // do something
+            // product.qty - paymentapproved.qty
+
+            product.qty = product.getQty() - paymentApproved.getQty();
+            
             repository().save(product);
 
-
          });
-        */
 
         
     }
@@ -105,16 +81,18 @@ public class Product  {
 
         */
 
-        /** Example 2:  finding and process
+        /** Example 2:  finding and process */
         
-        repository().findById(paymentCanceled.get???()).ifPresent(product->{
+        repository().findById(paymentCanceled.getProductId()).ifPresent(product->{
             
-            product // do something
+            // product.qty + paymentapproved.qty
+
+            product.qty = product.getQty() + paymentCanceled.getQty();
+
             repository().save(product);
 
 
          });
-        */
 
         
     }

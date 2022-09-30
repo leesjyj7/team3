@@ -35,10 +35,11 @@
 			<artifactId>spring-boot-starter-hateoas</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+
       <!-- lombok -->
 		<dependency>
 				<groupId>org.projectlombok</groupId>
@@ -90,6 +91,9 @@
 			<version>${cucumber.version}</version>
 			<scope>test</scope>
 		</dependency>
+
+
+		
 	</dependencies>
 
 	<dependencyManagement>

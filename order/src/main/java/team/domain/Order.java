@@ -18,87 +18,43 @@ public class Order  {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     
-    
-    
-    
-    
     private Long id;
-    
-    
-    
-    
-    
     private Long productId;
-    
-    
-    
-    
-    
     private Long qty;
-    
-    
-    
-    
-    
     private String address;
-    
-    
-    
-    
-    
     private Date orderDate;
-    
-    
-    
-    
-    
     private Date cancelDate;
-    
-    
-    
-    
-    
     private Long cost;
-    
-    
-    
-    
-    
     private String customerName;
-    
-    
-    
-    
-    
     private String phoneNumber;
-    
-    
-    
-    
-    
     private String status;
 
     @PostPersist
     public void onPostPersist(){
-        // Get request from Product
-        //team.external.Product product =
-        //    Application.applicationContext.getBean(team.external.ProductService.class)
-        //    .getProduct(/** mapping value needed */);
 
+        Ordered ordered = new Ordered(this);
+        ordered.setStatus("Ordered");
+        ordered.publishAfterCommit();
     }
     @PrePersist
     public void onPrePersist(){
 
-
         Ordered ordered = new Ordered(this);
-        ordered.publishAfterCommit();
+        team.external.Product product =
+        OrderApplication.applicationContext.getBean(team.external.ProductService.class)
+        .getProduct(ordered.getProductId());
 
+		if(product.getQty() <= ordered.getQty()){
+			throw new RuntimeException("out of stock");
+		}      
     }
+
     @PreRemove
     public void onPreRemove(){
 
 
         OrderCanceled orderCanceled = new OrderCanceled(this);
+        orderCanceled.setStatus("OrderCanceled");
         orderCanceled.publishAfterCommit();
 
     }

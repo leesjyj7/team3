@@ -40,17 +40,16 @@ public class ProductInfoViewHandler {
         }
     }
 
-
     @StreamListener(KafkaProcessor.INPUT)
     public void whenQtyChanged_then_UPDATE_1(@Payload QtyChanged qtyChanged) {
         try {
             if (!qtyChanged.validate()) return;
                 // view 객체 조회
-            Optional<ProductInfo> productInfoOptional = productInfoRepository.findByProductId(qtyChanged.getId());
+            Optional<ProductInfo> productInfoOptional = productInfoRepository.findById(qtyChanged.getId());
 
             if( productInfoOptional.isPresent()) {
                  ProductInfo productInfo = productInfoOptional.get();
-            // view 객체에 이벤트의 eventDirectValue 를 set 함
+                // view 객체에 이벤트의 eventDirectValue 를 set 함
                 productInfo.setQty(qtyChanged.getQty());    
                 // view 레파지 토리에 save
                  productInfoRepository.save(productInfo);

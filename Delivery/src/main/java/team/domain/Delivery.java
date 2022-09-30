@@ -83,6 +83,7 @@ public class Delivery  {
 
 
         Shipped shipped = new Shipped(this);
+        shipped.setStatus("Shipped");
         shipped.publishAfterCommit();
 
     }
@@ -91,6 +92,7 @@ public class Delivery  {
 
 
         ShippingCancled shippingCancled = new ShippingCancled(this);
+        shippingCancled.setStatus("ShippingCanceled");
         shippingCancled.publishAfterCommit();
 
     }
@@ -105,11 +107,14 @@ public class Delivery  {
 
     public static void shipping(PaymentApproved paymentApproved){
 
-        /** Example 1:  new item 
+        /** Example 1:  new item      */
         Delivery delivery = new Delivery();
+        delivery.setOrderId(paymentApproved.getOrderid());
+        delivery.setAddress(paymentApproved.getAddress());
+        
         repository().save(delivery);
 
-        */
+   
 
         /** Example 2:  finding and process
         
@@ -132,16 +137,15 @@ public class Delivery  {
 
         */
 
-        /** Example 2:  finding and process
+        /** Example 2:  finding and process   */
         
-        repository().findById(paymentCanceled.get???()).ifPresent(delivery->{
+        repository().findByOrderId(paymentCanceled.getOrderid()).ifPresent(delivery->{
             
-            delivery // do something
+            delivery.setStatus("CANCELLED"); // do something
             repository().save(delivery);
 
 
          });
-        */
 
         
     }

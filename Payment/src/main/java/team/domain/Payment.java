@@ -83,6 +83,7 @@ public class Payment  {
 
 
         PaymentApproved paymentApproved = new PaymentApproved(this);
+        paymentApproved.setStatus("PaymentApproved");
         paymentApproved.publishAfterCommit();
 
     }
@@ -91,6 +92,7 @@ public class Payment  {
 
 
         PaymentCanceled paymentCanceled = new PaymentCanceled(this);
+        paymentCanceled.setStatus("PaymentCanceled");
         paymentCanceled.publishAfterCommit();
 
     }
@@ -111,26 +113,41 @@ public class Payment  {
 
         */
 
-        /** Example 2:  finding and process
+        /** Example 2:  finding and process   */
         
-        repository().findById(orderCanceled.get???()).ifPresent(payment->{
-            
-            payment // do something
+        repository().findByOrderid(orderCanceled.getId()).ifPresent(payment->{
+            final Date nowDate = new Date();
+            payment.setStatus("CANCELLED"); // do something
+            payment.setProductId(orderCanceled.getProductId());
+            payment.setQty(orderCanceled.getQty());
+
+            System.out.println("paymentCancel : " + nowDate);
+
+            payment.setCancelDate(nowDate);
             repository().save(payment);
 
-
          });
-        */
 
         
     }
     public static void payment(Ordered ordered){
 
-        /** Example 1:  new item 
+        /** Example 1:  new item  */
         Payment payment = new Payment();
+        final Date nowDate = new Date();
+
+        System.out.println("payment : " + ordered.getId());
+
+        payment.setOrderid(ordered.getId());
+        payment.setStatus("SUCCESS");
+        payment.setProductId(ordered.getProductId());
+        payment.setQty(ordered.getQty());
+        payment.setAddress(ordered.getAddress());
+        payment.setPhoneNumber(ordered.getPhoneNumber());
+        payment.setApproveDate(nowDate);
+        
         repository().save(payment);
 
-        */
 
         /** Example 2:  finding and process
         
