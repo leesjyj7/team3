@@ -34,8 +34,8 @@ spec:
             backend: 
               serviceName: payment
               servicePort: 8080
-          - path: /viewPages
+          - path: /viewpages
             pathType: Prefix
             backend: 
-              serviceName: viewPage
+              serviceName: viewpage
               servicePort: 8080
