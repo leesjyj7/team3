@@ -10,8 +10,8 @@ mvn spring-boot:run
 
 ```
 mvn package -B -DskipTests
-docker build -t username/inventory:v1 .
-docker run username/inventory:v1
+docker build -t leesjyj/inventory:v1 .
+docker run leesjyj/inventory:v1
 ```
 
 ## Push images and running in Kubernetes
@@ -20,7 +20,7 @@ docker run username/inventory:v1
 docker login 
 # in case of docker hub, enter your username and password
 
-docker push username/inventory:v1
+docker push leesjyj/inventory:v1
 ```
 
 Edit the deployment.yaml under the /kubernetes directory:
@@ -28,7 +28,7 @@ Edit the deployment.yaml under the /kubernetes directory:
     spec:
       containers:
         - name: inventory
-          image: username/inventory:latest   # change this image name
+          image: leesjyj/inventory:latest   # change this image name
           ports:
             - containerPort: 8080
 
