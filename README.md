@@ -62,6 +62,13 @@
    4-3. compensation (취소모델)
  
    4-4. request/response - 동기호출 
+   
+      - 코드 구현 / Order --> Product(inventory) 
+
+![image](https://user-images.githubusercontent.com/110503179/193743687-2da46cfd-7be2-4c5e-8f43-c8be24ba7f9c.png)
+
+![image](https://user-images.githubusercontent.com/110503179/193743729-6e42e385-bf83-44cc-8fb7-3f327795ab92.png)
+
  
    4-5. circuit breaker 
    
