@@ -39,7 +39,12 @@ spec:
             backend: 
               serviceName: viewpage
               servicePort: 8080
-          - path: /viewpages
+          - path: /orderHistories
+            pathType: Prefix
+            backend: 
+              serviceName: viewpage
+              servicePort: 8080
+          - path: /productInfos
             pathType: Prefix
             backend: 
               serviceName: viewpage

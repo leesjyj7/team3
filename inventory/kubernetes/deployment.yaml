@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: inventory
-          image: leesjyj/inventory:v1
+          image: leesjyj/inventory:v2
           ports:
             - containerPort: 8080
           readinessProbe:
