@@ -49,11 +49,10 @@
 
 
 
-
 4. 시나리오 & 기능 TEST 
 
 
-   4-1. Saga (pub/sub)
+   4-1. Saga (Pub/Sub)
  
    4-2. CQRS - read model
    
@@ -84,8 +83,7 @@
  
    4-6. Gateway/Ingress 
    
-     - Ingress 설정
-     - nginx 기반 
+     - nginx 기반 Ingress 설정
      - status 및 External IP 정보
 
 ![image](https://user-images.githubusercontent.com/110503179/193736212-5cb09976-da5f-4580-a3e3-9b7cc1e04423.png)
@@ -105,26 +103,49 @@
  ![image](https://user-images.githubusercontent.com/110503179/193743511-a1a0ef53-0546-46e3-85e5-247ed8974eac.png)
 
  
- 
    4-7. Deploy/Pipeline
  
    4-8. Autoscale (HPA)
  
    4-9. Zero-downtime deploy (readiness probe)
+   
+    - readiness probe 설정전
+
+![image](https://user-images.githubusercontent.com/110503179/193746661-dc28400c-fd33-44dc-ac88-821921cda9b5.png)
+![image](https://user-images.githubusercontent.com/110503179/193746797-e45129c9-6ba1-42b4-8208-d847f17ac9fb.png)
+
+    - readiness probe 설정후
+    
+![image](https://user-images.githubusercontent.com/110503179/193746734-1e4bbb36-ae0e-4933-bbf5-920e1421eab9.png)
+   
  
    4-10. Persistence Volumn
     - Mysql DB 설정
     - Mysql pod 생성 및 service 제공
     - secret 적용
     - 각 서비스별 database 생성 (MSA 사상 접목)
-    - application.yaml 파일 설정
-    ![image](https://user-images.githubusercontent.com/110503179/193744895-fcf17d63-a1fe-4844-9d39-315c68895621.png)
+    
+    - application.yaml 파일 설정 (orders)
+    
+![image](https://user-images.githubusercontent.com/110503179/193744895-fcf17d63-a1fe-4844-9d39-315c68895621.png)
 
-    - deployment.yaml 파일 설정    
-    ![image](https://user-images.githubusercontent.com/110503179/193744759-e39a3766-5ebd-4a1d-aee5-5b3b8cca9f66.png)
+    
+    - application.yaml 파일 설정 (notifications)
+
+![image](https://user-images.githubusercontent.com/110503179/193746378-cb3528bd-5fef-4bcb-ba99-f9d2fd7df78b.png)
+
+    - application.yaml 파일 설정 (inventories/products)
+
+![image](https://user-images.githubusercontent.com/110503179/193746475-27335e40-9815-4bfe-b45b-6f5241ea7970.png)
+
+    
+    - deployment.yaml 파일 설정 (orders)    
+    
+![image](https://user-images.githubusercontent.com/110503179/193744759-e39a3766-5ebd-4a1d-aee5-5b3b8cca9f66.png)
     
     - secret 설정    
-    ![image](https://user-images.githubusercontent.com/110503179/193744963-d4753fb6-6858-40a5-8ee3-0ead22ef51b8.png)
+    
+![image](https://user-images.githubusercontent.com/110503179/193744963-d4753fb6-6858-40a5-8ee3-0ead22ef51b8.png)
     
 
    4-11. Polyglot
