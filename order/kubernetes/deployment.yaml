@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: order
-          image: byeongsu/order:v7
+          image: 936103362868.dkr.ecr.eu-west-3.amazonaws.com/order:v9
           ports:
             - containerPort: 8080
           readinessProbe:

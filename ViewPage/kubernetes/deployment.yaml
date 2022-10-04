@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: viewpage
-          image: byeongsu/viewpage:v8
+          image: 936103362868.dkr.ecr.eu-west-3.amazonaws.com/viewpage:v9
           ports:
             - containerPort: 8080
           readinessProbe:
