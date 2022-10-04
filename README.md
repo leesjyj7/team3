@@ -112,8 +112,27 @@
    4-7. Deploy/Pipeline
  
    4-8. Autoscale (HPA)
- 
-   4-9. Zero-downtime deploy (readiness probe)
+   
+    - Auto Scaling 설정 (resource-CPU 사용량 기준)
+  
+ ![image](https://user-images.githubusercontent.com/110503179/193752328-875ba3cd-4759-40ca-877a-cc9d9b01cfa1.png)
+
+ ![inven2](https://user-images.githubusercontent.com/110503179/193752035-705e84c1-e6a8-40a7-be5e-4ed54ac039ba.JPG)
+
+![inven3](https://user-images.githubusercontent.com/110503179/193752046-ba66a267-6a82-4c7d-b7f6-31e917561042.JPG)
+
+
+    - 부하발생
+    
+![image](https://user-images.githubusercontent.com/110503179/193752502-f44110a4-1c64-40e9-94f5-09d5ccd8954f.png)
+
+
+![inven_노드확장상태](https://user-images.githubusercontent.com/110503179/193752054-6817f78f-9567-4924-a402-2b7c470be1d4.JPG)
+
+    - resource 사용량이 늘어 node 가 작동 확장됨을 확인
+
+
+4-9. Zero-downtime deploy (readiness probe)
    
     - readiness probe 설정전
 
