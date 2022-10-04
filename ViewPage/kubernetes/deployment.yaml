@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: viewpage
-          image: byeongsu/viewpage:v7
+          image: byeongsu/viewpage:v8
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -41,7 +41,7 @@ spec:
             - name: _DATASOURCE_ADDRESS
               value: mysql
             - name: _DATASOURCE_TABLESPACE
-              value: viewpage
+              value: viewpagedb
             - name: _DATASOURCE_USERNAME
               value: root
             - name: _DATASOURCE_PASSWORD
