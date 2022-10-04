@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: viewpage
-          image: byeongsu/viewpage:v6
+          image: byeongsu/viewpage:v7
           ports:
             - containerPort: 8080
           readinessProbe:
