@@ -50,14 +50,18 @@
 
 
 
-
-
 4. 시나리오 & 기능 TEST 
 
 
    4-1. Saga (pub/sub)
  
    4-2. CQRS - read model
+   
+      - 주문정보 및 상품정보 대상 CQRS 구현
+   
+![image](https://user-images.githubusercontent.com/110503179/193744102-1419cecd-37f1-42a2-ae12-0a0dbd52bba5.png)
+![image](https://user-images.githubusercontent.com/110503179/193744505-3667082e-cfdf-47e7-abdf-70401e11e90a.png)
+   
  
    4-3. compensation (취소모델)
  
