@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ViewPage
+  name: viewpage
   labels:
-    app: ViewPage
+    app: viewpage
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ViewPage
+      app: viewpage
   template:
     metadata:
       labels:
-        app: ViewPage
+        app: viewpage
     spec:
       containers:
-        - name: ViewPage
-          image: username/ViewPage:latest
+        - name: viewpage
+          image: byeongsu/viewpage:v2
           ports:
             - containerPort: 8080
           readinessProbe:
