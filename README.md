@@ -62,6 +62,8 @@
  4-3. compensation (취소모델)
  
  4-4. request/response - 동기호출 
+ ![image](https://user-images.githubusercontent.com/110604452/193742323-f2b8b9e1-67c4-4f18-940f-94fc2549c0cd.png)
+ ![image](https://user-images.githubusercontent.com/110604452/193742284-e37321ed-12a8-4718-a749-28fd467de4a8.png)
  
  4-5. circuit breaker 
  
