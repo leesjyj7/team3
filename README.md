@@ -136,7 +136,6 @@
    
     - readiness probe 설정전
 
-![image](https://user-images.githubusercontent.com/110503179/193746661-dc28400c-fd33-44dc-ac88-821921cda9b5.png)
 ![image](https://user-images.githubusercontent.com/110503179/193746797-e45129c9-6ba1-42b4-8208-d847f17ac9fb.png)
 
     - readiness probe 설정후
