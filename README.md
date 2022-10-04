@@ -64,6 +64,12 @@
    4-4. request/response - 동기호출 
  
    4-5. circuit breaker 
+   
+      - 재고량 보다 많은 제품 주문 시 에러 발생 
+
+![image](https://user-images.githubusercontent.com/110503179/193743296-246cd4b2-1692-4680-8da5-305b8d8fd206.png)
+![image](https://user-images.githubusercontent.com/110503179/193743339-312b389a-4999-4058-a43c-bcc0a3412f22.png)
+
  
    4-6. Gateway/Ingress 
    
