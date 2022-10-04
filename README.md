@@ -134,11 +134,11 @@
 
 4-9. Zero-downtime deploy (readiness probe)
    
-    - readiness probe 설정전
+    - readiness probe 설정 전 seige 로그 
 
 ![image](https://user-images.githubusercontent.com/110503179/193746797-e45129c9-6ba1-42b4-8208-d847f17ac9fb.png)
 
-    - readiness probe 설정후
+    - readiness probe 설정 후 seige 로그 -> 응답률 100% 확인 
     
 ![image](https://user-images.githubusercontent.com/110503179/193746734-1e4bbb36-ae0e-4933-bbf5-920e1421eab9.png)
    
