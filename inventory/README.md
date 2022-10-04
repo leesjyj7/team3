@@ -18,6 +18,7 @@ docker run leesjyj/inventory:v1
 
 ```
 docker login 
+docker login -u leesjyj
 # in case of docker hub, enter your username and password
 
 docker push leesjyj/inventory:v1

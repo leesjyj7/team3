@@ -39,3 +39,8 @@ spec:
             backend: 
               serviceName: viewpage
               servicePort: 8080
+          - path: /viewpages
+            pathType: Prefix
+            backend: 
+              serviceName: viewpage
+              servicePort: 8080
