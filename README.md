@@ -2,6 +2,8 @@
 
 조원 - 이상준 / 이병수 / 남지연 / 황호준 / 박아름
 
+
+
 1. 서비스 및 시나리오
 
  꽃배달 서비스 상점 운영 
@@ -13,6 +15,8 @@
  - 고객이 주문 리스트를 조회하여 취소하면 결제 및 배송이 취소되며 상품 재고량이 조정된다. 
  - 결재/배송/취소 등의 메세지를 고객에게 알린다. 
  - 현장방문 및 판매는 지원하지 않으며 온라인 전용 서비스이다. 
+
+
  
 2. EventStorming 결과
 
@@ -23,14 +27,51 @@
 ![image](https://user-images.githubusercontent.com/110503179/193733359-7f088b37-6928-43d3-a792-caed78c4ddce.png)
 
 
-3. 
 
-4.
 
-5. 
+3. 구현
 
-6. 
+  - 분석/설계 단계에서 정리된 6개의 bounded context 를 기준으로 스프링부트로 구현
+  - 각 서비스의 서비스 포트는 다음과 같다. 
+    - order : 8081
+    - delivery : 8082 
+    - inventory : 8083
+    - notification : 8084
+    - payment : 8085
+    - viewpage : 8086
+  - 디렉토리 구조는 다음과 같다. (1 level)
+  
+  ![image](https://user-images.githubusercontent.com/110503179/193734762-1815a9bd-8c26-4421-95ce-9e586601f513.png)
 
+- 서비스별 코드 구현 후에 kubernetes 에 배포 / 서비스 노출 
+
+![image](https://user-images.githubusercontent.com/110503179/193735584-77f520fc-2282-441b-9a13-12f139c6312a.png)
+
+
+
+
+
+
+4. 추가 기능 / 설명 
+
+- Ingress 설정
+  - nginx 기반 
+  - status 및 External IP 정보
+
+![image](https://user-images.githubusercontent.com/110503179/193736212-5cb09976-da5f-4580-a3e3-9b7cc1e04423.png)
+
+
+- Mysql DB 설정
+  - Mysql pod 생성 및 service 제공
+  - secret 적용
+  - 각 서비스별 database 생성 (MSA 사상 접목)
+
+- AutoScaling
+
+- Zero-downtime deploy
+
+- Self-healing (Liveness probe 구성)
+  
 
 
 
