@@ -55,38 +55,50 @@
 4. 시나리오 & 기능 TEST 
 
 
- 4-1. Saga (pub/sub)
+   4-1. Saga (pub/sub)
  
- 4-2. CQRS - read model
+   4-2. CQRS - read model
  
- 4-3. compensation (취소모델)
+   4-3. compensation (취소모델)
  
- 4-4. request/response - 동기호출 
+   4-4. request/response - 동기호출 
  
- 4-5. circuit breaker 
+   4-5. circuit breaker 
  
- 4-6. Gateway/Ingress 
- 
- 4-7. Deploy/Pipeline
- 
- 4-8. Autoscale (HPA)
- 
- 4-9. Zero-downtime deploy (readiness probe)
- 
- 4-10. Persistence Volumn
- 
- 4-11. Polyglot
- 
- 4-12. Self-healting (liveness probe)
- 
- 
-
-
-- Ingress 설정
-  - nginx 기반 
-  - status 및 External IP 정보
+   4-6. Gateway/Ingress 
+   
+     - Ingress 설정
+     - nginx 기반 
+     - status 및 External IP 정보
 
 ![image](https://user-images.githubusercontent.com/110503179/193736212-5cb09976-da5f-4580-a3e3-9b7cc1e04423.png)
+
+ 
+     - ingress를 통한 서비스별 접속 URL
+       http://a82ab914de40041ddbc7aab4309c836c-1405241384.eu-west-3.elb.amazonaws.com/orders
+       http://a82ab914de40041ddbc7aab4309c836c-1405241384.eu-west-3.elb.amazonaws.com/payments
+       http://a82ab914de40041ddbc7aab4309c836c-1405241384.eu-west-3.elb.amazonaws.com/orderHistories
+       http://a82ab914de40041ddbc7aab4309c836c-1405241384.eu-west-3.elb.amazonaws.com/productInfos
+       http://a82ab914de40041ddbc7aab4309c836c-1405241384.eu-west-3.elb.amazonaws.com/deliveries
+       http://a82ab914de40041ddbc7aab4309c836c-1405241384.eu-west-3.elb.amazonaws.com/products
+       http://a82ab914de40041ddbc7aab4309c836c-1405241384.eu-west-3.elb.amazonaws.com/messages
+ 
+ 
+   4-7. Deploy/Pipeline
+ 
+   4-8. Autoscale (HPA)
+ 
+   4-9. Zero-downtime deploy (readiness probe)
+ 
+   4-10. Persistence Volumn
+ 
+   4-11. Polyglot
+ 
+   4-12. Self-healting (liveness probe)
+ 
+ 
+
+
 
 
 - Mysql DB 설정
