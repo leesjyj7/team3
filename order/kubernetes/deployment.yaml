@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: order
-          image: byeongsu/order:v6
+          image: byeongsu/order:v7
           ports:
             - containerPort: 8080
           readinessProbe:

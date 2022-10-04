@@ -35,50 +35,17 @@ spec:
             timeoutSeconds: 2
             periodSeconds: 5
             failureThreshold: 5
-
----
-
-apiVersion: "apps/v1"
-kind: "Deployment"
-metadata: 
-  name: "inventory"
-  labels: 
-    app: "inventory"
-spec: 
-  selector: 
-    matchLabels: 
-      app: "inventory"
-  replicas: 1
-  template: 
-    metadata: 
-      labels: 
-        app: "inventory"
-    spec: 
-      containers: 
-        - 
-          name: "inventory"
-          image: "leesjyj/inventory:database"
-          ports: 
-            - 
-              containerPort: 80
           env:
             - name: superuser.userId
-              value: some_value					
+              value: userId
             - name: _DATASOURCE_ADDRESS
               value: mysql
             - name: _DATASOURCE_TABLESPACE
-              value: flowerstore
+              value: inventorydb
             - name: _DATASOURCE_USERNAME
               value: root
             - name: _DATASOURCE_PASSWORD
-              value: admin
-
----
-
-apiVersion: v1
-kind: Secret
-metadata:
-  name: mysql-pass
-type: Opaque
-data:
-  password: YWRtaW4= 
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-pass
+                  key: password
