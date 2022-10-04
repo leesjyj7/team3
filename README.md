@@ -52,7 +52,22 @@
 
 
 
-4. 추가 기능 / 설명 
+4. 시나리오 & 기능 TEST 
+
+
+ 4-1. Saga (pub/sub)
+ 4-2. CQRS - read model
+ 4-3. compensation (취소모델)
+ 4-4. request/response - 동기호출 
+ 4-5. circuit breaker 
+ 4-6. Gateway/Ingress 
+ 4-7. Deploy/Pipeline
+ 4-8. Autoscale (HPA)
+ 4-9. Zero-downtime deploy (readiness probe)
+ 4-10. Persistence Volumn
+ 4-11. Polyglot
+ 4-12. Self-healting (liveness probe)
+
 
 - Ingress 설정
   - nginx 기반 
