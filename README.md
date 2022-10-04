@@ -113,11 +113,19 @@
    4-9. Zero-downtime deploy (readiness probe)
  
    4-10. Persistence Volumn
-
     - Mysql DB 설정
     - Mysql pod 생성 및 service 제공
     - secret 적용
     - 각 서비스별 database 생성 (MSA 사상 접목)
+    - application.yaml 파일 설정
+    ![image](https://user-images.githubusercontent.com/110503179/193744895-fcf17d63-a1fe-4844-9d39-315c68895621.png)
+
+    - deployment.yaml 파일 설정    
+    ![image](https://user-images.githubusercontent.com/110503179/193744759-e39a3766-5ebd-4a1d-aee5-5b3b8cca9f66.png)
+    
+    - secret 설정    
+    ![image](https://user-images.githubusercontent.com/110503179/193744963-d4753fb6-6858-40a5-8ee3-0ead22ef51b8.png)
+    
 
    4-11. Polyglot
  
