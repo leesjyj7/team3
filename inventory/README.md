@@ -28,7 +28,7 @@ Edit the deployment.yaml under the /kubernetes directory:
     spec:
       containers:
         - name: inventory
-          image: leesjyj/inventory:latest   # change this image name
+          image: leesjyj/inventory:v1   # change this image name
           ports:
             - containerPort: 8080
 
