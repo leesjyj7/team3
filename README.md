@@ -53,6 +53,12 @@
 
 
    4-1. Saga (Pub/Sub)
+
+      - 서비스간 Saga Pattern 구현 (kafka topic 발췌)
+
+
+![image](https://user-images.githubusercontent.com/110503179/193747966-57723925-85f1-406d-b5db-030764fb01ef.png)
+
  
    4-2. CQRS - read model
    
