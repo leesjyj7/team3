@@ -89,6 +89,11 @@
        http://a82ab914de40041ddbc7aab4309c836c-1405241384.eu-west-3.elb.amazonaws.com/products
        http://a82ab914de40041ddbc7aab4309c836c-1405241384.eu-west-3.elb.amazonaws.com/messages
  
+     - order 서비스 접속 예시
+     
+ ![image](https://user-images.githubusercontent.com/110503179/193743511-a1a0ef53-0546-46e3-85e5-247ed8974eac.png)
+
+ 
  
    4-7. Deploy/Pipeline
  
