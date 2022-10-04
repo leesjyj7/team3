@@ -91,7 +91,12 @@
    4-9. Zero-downtime deploy (readiness probe)
  
    4-10. Persistence Volumn
- 
+
+    - Mysql DB 설정
+    - Mysql pod 생성 및 service 제공
+    - secret 적용
+    - 각 서비스별 database 생성 (MSA 사상 접목)
+
    4-11. Polyglot
  
    4-12. Self-healting (liveness probe)
@@ -101,17 +106,7 @@
 
 
 
-- Mysql DB 설정
-  - Mysql pod 생성 및 service 제공
-  - secret 적용
-  - 각 서비스별 database 생성 (MSA 사상 접목)
 
-- AutoScaling
-
-- Zero-downtime deploy
-
-- Self-healing (Liveness probe 구성)
-  
 
 
 
