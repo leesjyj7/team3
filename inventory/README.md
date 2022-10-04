@@ -12,6 +12,9 @@ mvn spring-boot:run
 mvn package -B -DskipTests
 docker build -t leesjyj/inventory:v1 .
 docker run leesjyj/inventory:v1
+
+docker build -t leesjyj/inventory:v2 .
+docker run leesjyj/inventory:v2
 ```
 
 ## Push images and running in Kubernetes
